@@ -1,11 +1,21 @@
-import React from "react"; 
+import React from "react";
 
-function Product() {
-  return (
-    <div className="App">
-      Name: Wau (Traditional kite)
-    </div>
-  );
+class Product extends React.Component {
+    render() {
+        return (
+            <div>
+             Name: {this.props.inventory.name} - Price: {this.props.inventory.price}
+            </div>
+        );
+    }
 }
 
-export default Product
+// function Product(props) {
+//   return (
+//   <div>
+//       Name: {props.inventory.name} - Price: {props.inventory.price}
+//   </div>
+//   );
+// }
+
+export default Product;
