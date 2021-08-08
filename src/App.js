@@ -1,7 +1,7 @@
 import logo, { ReactComponent } from "./logo.svg";
 import "./App.css";
 import React from "react"; 
-import { Product } from "./Product"; 
+import Product from "./Product"; 
 
 const inventories = [
   { name: "Batik sarong", price: "$80" },
