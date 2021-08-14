@@ -12,30 +12,21 @@ const inventories = [
   { name: "Batik drawstring bag", price: "$25" },
 ];
 
-// class App extends React.Component {
-//   render() {
-//     const inventoryElements = inventories.map((inventory) => (
-//       <Product inventory={inventory} />
-//     ));
-//     return (
-//     <div className="App">
-//       <header className="App-header">
-//         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-//         <p>Welcome to Malaysian Creations!</p>
-//         {inventoryElements}
-//       </header>
-//     </div>
-//     );
-//   }
-// }
+class App extends React.Component {
 
+  // property initializer 
+  state = {
+    name: 'Batik sarong'
+  }
 
-function App() {
-const inventoryElements = inventories.map((inventory) => (
-  <Product inventory={inventory} />
-));
+  render() {
 
-  return (
+    console.log(this.state) 
+
+    const inventoryElements = inventories.map((inventory) => (
+      <Product inventory={inventory} />
+    ));
+    return (
     <div className="App">
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
@@ -43,7 +34,25 @@ const inventoryElements = inventories.map((inventory) => (
         {inventoryElements}
       </header>
     </div>
-  );
+    );
+  }
 }
+
+
+// function App() {
+// const inventoryElements = inventories.map((inventory) => (
+//   <Product inventory={inventory} />
+// ));
+
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         {/* <img src={logo} className="App-logo" alt="logo" /> */}
+//         <p>Welcome to Malaysian Creations!</p>
+//         {inventoryElements}
+//       </header>
+//     </div>
+//   );
+// }
 
 export default App;
