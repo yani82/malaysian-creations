@@ -16,7 +16,8 @@ class App extends React.Component {
 
   // property initializer 
   state = {
-    name: 'Batik sarong'
+    name: "Batik sarong",
+    price: "$80",
   }
 
   render() {
@@ -29,8 +30,8 @@ class App extends React.Component {
     return (
     <div className="App">
       <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <p>Welcome to Malaysian Creations!</p>
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>Welcome to Malaysian Creations {this.state.name}!</p>
         {inventoryElements}
       </header>
     </div>
