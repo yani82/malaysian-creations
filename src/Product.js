@@ -11,6 +11,7 @@ import React from "react";
 // }
 
 function Product(props) {
+  
   return (
   <>
       <div>Name: {props.inventory.name} - Price: {props.inventory.price}</div>

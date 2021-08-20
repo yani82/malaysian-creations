@@ -1,4 +1,4 @@
-import logo, { ReactComponent } from "./logo.svg";
+// import logo, { ReactComponent } from "./logo.svg";
 import "./App.css";
 import React from "react"; 
 import Product from "./Product"; 
@@ -16,23 +16,25 @@ class App extends React.Component {
 
   // property initializer 
   state = {
+    inventory: {
     name: "Batik sarong",
     price: "$80",
+    },
   }
 
   render() {
 
     console.log(this.state); 
 
-    const inventoryElements = inventories.map((inventory) => (
-      <Product inventory={inventory} />
-    ));
+    const inventoryElements = inventories.map((inventory) => {
+  return <Product key={inventory.name} inventory={inventory} />
+  });
     return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Welcome to Malaysian Creations {this.state.name}!</p>
-        <p>New collection of {this.state.name}</p>
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <p>Welcome to Malaysian Creations {this.state.inventory.name}!</p>
+        <p>New collection of {this.state.inventory.name}</p>
         {inventoryElements}
       </header>
     </div>
