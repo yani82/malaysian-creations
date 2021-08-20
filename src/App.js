@@ -22,7 +22,7 @@ class App extends React.Component {
 
   render() {
 
-    console.log(this.state) 
+    console.log(this.state); 
 
     const inventoryElements = inventories.map((inventory) => (
       <Product inventory={inventory} />
@@ -32,6 +32,7 @@ class App extends React.Component {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Welcome to Malaysian Creations {this.state.name}!</p>
+        <p>New collection of {this.state.name}</p>
         {inventoryElements}
       </header>
     </div>
