@@ -14,7 +14,8 @@ function Product(props) {
   
   return (
   <>
-      <div>Name: {props.inventory.name} - Price: {props.inventory.price}</div>
+      <div>Name: {props.inventory.name}</div> 
+      <div>Price: {props.inventory.price}</div>
   </>
   );
 }

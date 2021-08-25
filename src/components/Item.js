@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
 export default function Item(props) {
-    console.log(props.category);
-    return <div>Hello</div>;
+    console.log(props);
+    return <div>{props.category}</div>;
 }
   

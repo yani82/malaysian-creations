@@ -38,6 +38,7 @@ class App extends React.Component {
     <div>
         <Item category={this.state.category} />
         <ProductList inventories={this.state.inventories} />
+        <button></button>
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         {/* <p>Welcome to Malaysian Creations {this.state.inventory.name}!</p>
         <p>New collection of {this.state.inventories.name}</p>
