@@ -1,8 +1,9 @@
 // import logo, { ReactComponent } from "./logo.svg";
 import "./App.css";
 import React from "react"; 
-import Product from "./Product"; 
+// import Product from "./Product"; 
 import Item from "./components/Item"; 
+import ProductList from "./components/ProductList"; 
 
 const inventories = [
   { name: "Batik sarong", price: "$80" },
@@ -17,7 +18,7 @@ class App extends React.Component {
 
   // property initializer 
   state = {
-    inventory: [
+    inventories: [
       { name: "Batik sarong", price: "$80" },
       { name: "Wau (traditional kite)", price: "$50" },
       { name: "Painting", price: "$100" },
@@ -29,20 +30,18 @@ class App extends React.Component {
   };
 
   render() {
-    // console.log(this.state); 
 
-    const inventoryElements = this.state.inventories.map((inventory) => {
-  return <Product key={inventory.name} inventory={inventory} />
-  });
+    // const inventoryElements = this.state.inventories.map((inventory) => {
+    // return <Product key={inventory.name} inventory={inventory} />
+    // });
     return (
-    <div className="App">
-      <header className="App-header">
-        <Item subject={this.state.category} />
+    <div>
+        <Item category={this.state.category} />
+        <ProductList inventories={this.state.inventories} />
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <p>Welcome to Malaysian Creations {this.state.inventory.name}!</p>
-        <p>New collection of {this.state.inventory.name}</p>
-        {inventoryElements}
-      </header>
+        {/* <p>Welcome to Malaysian Creations {this.state.inventory.name}!</p>
+        <p>New collection of {this.state.inventories.name}</p>
+        {inventoryElements} */}
     </div>
     );
   }
