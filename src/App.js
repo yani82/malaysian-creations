@@ -1,9 +1,12 @@
 // import logo, { ReactComponent } from "./logo.svg";
 import "./App.css";
 import React from "react"; 
+import Prices from "./components/Prices"; 
 // import Product from "./Product"; 
-import Item from "./components/Item"; 
+// import Item from "./components/Item"; 
 import ProductList from "./components/ProductList"; 
+
+
 
 const inventories = [
   { name: "Batik sarong", price: "$80" },
@@ -26,7 +29,8 @@ class App extends React.Component {
       { name: "Beaded scarf", price: "$60" },
       { name: "Batik drawstring bag", price: "$25" },
     ],
-    category: "Handicrafts", 
+    categories: ["Handicrafts", "Textiles", "Jewellery"], 
+    view: "inventories", 
   };
 
   handleClick = () => {
@@ -39,6 +43,10 @@ class App extends React.Component {
     console.log('form was submitted');
   };
 
+  changeView = (newView) => {
+    this.setState({view: newView})
+  }
+
   render() {
 
     // const inventoryElements = this.state.inventories.map((inventory) => {
@@ -46,9 +54,38 @@ class App extends React.Component {
     // });
     return (
     <div>
-        <Item category={this.state.category} />
+      <nav>
+        <li 
+          onClick={() => this.changeView("inventories")} 
+          style={{ cursor: "pointer" }}
+          >
+            Item List
+        </li>
+        <li 
+          onClick={() => this.changeView("categories")} 
+          style={{ cursor: "pointer" }}
+          >
+            Categories List
+        </li>
+        <li 
+          onClick={() => this.changeView("prices")} 
+          style={{ cursor: "pointer" }}
+          >
+            Price List
+        </li>
+      </nav>
+      {this.state.view === "inventories" && (
+        <ProductList inventories={this.state.inventories} /> 
+      )}
+      {this.state.view === "categories" && (
+        <CategoryList categories={this.state.categories} /> 
+      )}
+      {this.state.view === "prices" && (
+        <PriceList prices={this.state.prices} /> 
+      )}
+        {/* <Item category={this.state.category} />
         <ProductList inventories={this.state.inventories} />
-        <button onClick={this.handClick}>Click</button>
+        <button onClick={this.handClick}>Click</button> */}
         {/* <form onSubmit={this.handleSubmit}>
           <button type='submit'>Submit</button>
         </form> */}
