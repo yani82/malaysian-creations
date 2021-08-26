@@ -26,7 +26,17 @@ class App extends React.Component {
       { name: "Beaded scarf", price: "$60" },
       { name: "Batik drawstring bag", price: "$25" },
     ],
-    category: "Handicraft", 
+    category: "Handicrafts", 
+  };
+
+  handleClick = () => {
+    console.log('button was clicked');
+    this.setState({category: "Textiles"});
+  };
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+    console.log('form was submitted');
   };
 
   render() {
@@ -38,7 +48,10 @@ class App extends React.Component {
     <div>
         <Item category={this.state.category} />
         <ProductList inventories={this.state.inventories} />
-        <button></button>
+        <button onClick={this.handClick}>Click</button>
+        {/* <form onSubmit={this.handleSubmit}>
+          <button type='submit'>Submit</button>
+        </form> */}
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         {/* <p>Welcome to Malaysian Creations {this.state.inventory.name}!</p>
         <p>New collection of {this.state.inventories.name}</p>
