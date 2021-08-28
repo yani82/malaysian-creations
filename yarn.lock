@@ -4789,7 +4789,7 @@
     "text-table" "^0.2.0"
     "v8-compile-cache" "^2.0.3"
 
-"eslint@^3 || ^4 || ^5 || ^6 || ^7", "eslint@^7.32.0":
+"eslint@^3 || ^4 || ^5 || ^6 || ^7":
   "integrity" "sha512-VHZ8gX+EDfz+97jGcgyGCyRia/dPOd6Xh9yPv8Bl1+SoaIwD+a/vlrOmGRUyOYu7MwUhc7CxqeaDZU13S4+EpA=="
   "resolved" "https://registry.yarnpkg.com/eslint/-/eslint-7.32.0.tgz"
   "version" "7.32.0"

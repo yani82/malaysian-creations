@@ -20,8 +20,8 @@ module.exports = {
     "rules": {
         // "semi": ["error", "always"],
         // "quotes": ["error", "double"]
-        "react/jsx-uses-react": "error",
-        "react/jsx-uses-vars": "error",
-        "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+        // "react/jsx-uses-react": "error",
+        // "react/jsx-uses-vars": "error",
+        // "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
     }
 };

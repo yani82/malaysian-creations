@@ -2,9 +2,8 @@
 import "./App.css";
 import React from "react"; 
 import Prices from "./components/Prices"; 
-// import Product from "./Product"; 
-// import Item from "./components/Item"; 
 import ProductList from "./components/ProductList"; 
+import CategoryList from "./components/CategoryList";
 
 
 
@@ -21,6 +20,7 @@ class App extends React.Component {
 
   // property initializer 
   state = {
+    currentUser: {username: "Yani"},
     inventories: [
       { name: "Batik sarong", price: "$80" },
       { name: "Wau (traditional kite)", price: "$50" },
@@ -81,7 +81,7 @@ class App extends React.Component {
         <CategoryList categories={this.state.categories} /> 
       )}
       {this.state.view === "prices" && (
-        <PriceList prices={this.state.prices} /> 
+        <Prices user={this.state.currentUser} /> 
       )}
         {/* <Item category={this.state.category} />
         <ProductList inventories={this.state.inventories} />
