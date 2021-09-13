@@ -1,6 +1,7 @@
 // import logo, { ReactComponent } from "./logo.svg";
 import "./App.css";
 import React from "react"; 
+// try React, { Component } from 'react' - change the inventories line 
 import Prices from "./components/Prices"; 
 import ProductList from "./components/ProductList"; 
 import CategoryList from "./components/CategoryList";
